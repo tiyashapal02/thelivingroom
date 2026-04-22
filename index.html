@@ -193,10 +193,29 @@
   .submit-btn:hover { background: var(--gold); color: var(--dark); }
 
   /* ── SUCCESS ── */
-  .success { display: none; text-align: center; padding: 50px 36px; }
-  .success-icon { font-size: 40px; margin-bottom: 16px; }
-  .success h2 { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 300; color: var(--dark); margin-bottom: 10px; }
-  .success p { font-size: 13px; color: var(--warm-gray); font-weight: 300; line-height: 1.8; }
+  .success { display: none; }
+  .success-top-bar { height: 3px; background: var(--gold); }
+  .success-body { padding: 44px 36px 48px; text-align: center; }
+  .success-logo { margin-bottom: 6px; }
+  .s-logo-the { font-weight: 200; font-size: 11px; letter-spacing: 8px; text-transform: uppercase; color: var(--warm-gray); margin-bottom: 2px; }
+  .s-logo-living { font-family: "Cormorant Garamond", serif; font-size: 36px; font-weight: 300; color: var(--dark); line-height: 1; }
+  .s-logo-room { font-family: "Cormorant Garamond", serif; font-size: 36px; font-style: italic; font-weight: 300; color: var(--gold); line-height: 1; }
+  .success-divider { width: 40px; height: 1px; background: var(--gold); margin: 20px auto; }
+  .success-icon { font-size: 44px; margin-bottom: 14px; }
+  .success h2 { font-family: "Cormorant Garamond", serif; font-size: 32px; font-weight: 300; color: var(--dark); margin-bottom: 10px; }
+  .success-sub { font-size: 13px; color: var(--warm-gray); font-weight: 300; line-height: 1.8; margin-bottom: 28px; }
+  .success-steps { text-align: left; background: var(--light-bg); border-radius: 3px; padding: 20px; margin-bottom: 4px; }
+  .success-step { display: flex; gap: 14px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .success-step:last-child { border-bottom: none; }
+  .s-step-num { background: var(--gold); color: white; font-size: 10px; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .s-step-text { font-size: 12px; color: var(--warm-gray); font-weight: 300; line-height: 1.7; }
+  .s-step-text strong { color: var(--dark); font-weight: 400; }
+  .success-contact { margin-top: 4px; }
+  .success-contact-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--warm-gray); margin-bottom: 14px; }
+  .success-contact-links { display: flex; gap: 12px; justify-content: center; }
+  .s-contact-btn { display: flex; align-items: center; gap: 8px; padding: 12px 20px; border: 1px solid var(--border); border-radius: 2px; font-family: "Jost", sans-serif; font-size: 12px; font-weight: 300; color: var(--dark); text-decoration: none; background: var(--light-bg); transition: all 0.2s; letter-spacing: 1px; }
+  .s-contact-btn:hover { border-color: var(--gold); background: #fdf6e8; }
+  .success-note { font-family: "Cormorant Garamond", serif; font-size: 18px; font-style: italic; color: var(--warm-gray); margin-top: 20px; font-weight: 300; }
 
   .footer-note { text-align: center; font-size: 11px; color: var(--warm-gray); font-weight: 300; margin-top: 20px; line-height: 1.8; }
   .footer-note a { color: var(--gold); text-decoration: none; }
@@ -229,7 +248,7 @@
       <div class="note-text"><strong>How it works:</strong> This form captures your preference. We'll reach out on <a href="https://wa.me/918902337590" target="_blank" style="color:var(--gold); text-decoration:none;">WhatsApp</a> to confirm availability, share the exact address, and sort out payment — all in one chat. Easy and personal!</div>
     </div>
 
-    <form id="bookingForm">
+    <form id="bookingForm" action="https://formspree.io/f/mnjlgkew" method="POST">
 
       <!-- Personal Details -->
       <div class="form-section">
@@ -441,9 +460,45 @@
     </form>
 
     <div class="success" id="successMsg">
-      <div class="success-icon">🏡</div>
-      <h2>Request Received!</h2>
-      <p>Thank you! We'll reach out on WhatsApp within a few hours to confirm your slot, share the address, and sort out payment — all in one chat.<br><br>Can't wait to host you at The Living Room. ✨</p>
+      <div class="success-top-bar"></div>
+      <div class="success-body">
+        <div class="success-logo">
+          <div class="s-logo-the">The</div>
+          <div class="s-logo-living">Living</div>
+          <div class="s-logo-room">Room</div>
+        </div>
+        <div class="success-divider"></div>
+        <div class="success-icon">🏡</div>
+        <h2>Request Received!</h2>
+        <p class="success-sub">Thank you for reaching out. We are thrilled you chose The Living Room for your gathering.</p>
+        <div class="success-steps">
+          <div class="success-step">
+            <div class="s-step-num">1</div>
+            <div class="s-step-text">We will reach out on <strong>WhatsApp within a few hours</strong> to confirm your slot availability</div>
+          </div>
+          <div class="success-step">
+            <div class="s-step-num">2</div>
+            <div class="s-step-text">Once confirmed, we will share <strong>payment details</strong> for the 50% advance</div>
+          </div>
+          <div class="success-step">
+            <div class="s-step-num">3</div>
+            <div class="s-step-text">We will share the <strong>exact address</strong> after the booking is locked in</div>
+          </div>
+          <div class="success-step">
+            <div class="s-step-num">4</div>
+            <div class="s-step-text">Show up, settle in, and <strong>enjoy your time</strong> at The Living Room</div>
+          </div>
+        </div>
+        <div class="success-divider"></div>
+        <div class="success-contact">
+          <div class="success-contact-label">Need to reach us sooner?</div>
+          <div class="success-contact-links">
+            <a href="https://www.instagram.com/thelivingroom.blr/" target="_blank" class="s-contact-btn"><span>📸</span> Instagram</a>
+            <a href="https://wa.me/918902337590" target="_blank" class="s-contact-btn"><span>💬</span> WhatsApp</a>
+          </div>
+        </div>
+        <div class="success-note">Can not wait to host you. See you soon! 🌿</div>
+      </div>
     </div>
 
   </div>
@@ -501,9 +556,24 @@
   // Form submit
   document.getElementById('bookingForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    this.style.display = 'none';
-    document.getElementById('successMsg').style.display = 'block';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const form = this;
+    const data = new FormData(form);
+
+    fetch('https://formspree.io/f/mnjlgkew', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        alert('Something went wrong. Please try again or reach us on WhatsApp.');
+      }
+    }).catch(error => {
+      alert('Something went wrong. Please try again or reach us on WhatsApp.');
+    });
   });
 </script>
 
